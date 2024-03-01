@@ -1,0 +1,135 @@
+/* set the base font and background color for the body */
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: #f5f0ff;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+/* style the container to center its content and adjust padding */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    transition: padding 0.3s ease;
+    position: relative;
+    min-height: 100vh; /* ensure the container covers at least the viewport height */
+}
+
+/* style the heading using transition */
+h1 {
+    position: relative;
+    font-size: 28px;
+    font-weight: bold;
+    transition: font-size 0.3s ease, margin-top 0.3s ease, color 0.3s ease;
+    margin-top: 0; /* Remove default margin */
+}
+
+/* style the span within the heading */
+h1 span {
+    z-index: 100;
+    color: #6a0dad;
+    transition: all 500ms cubic-bezier(0.075, 0.81, 0.165, 1);
+}
+
+/* style the pseudo-element before the heading */
+h1::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: calc(100% - 4px);
+    height: 0;
+    right: 0;
+    bottom: 0;
+    border-left: 2px solid #ffffff00;
+    border-right: 2px solid #ffffff00;
+    transition: all 500ms cubic-bezier(0.075, 0.81, 0.165, 1);
+}
+
+/* adjust styles on hover for the pseudo-element and the span */
+h1:hover::before {
+    background-color: transparent;
+    height: 100%;
+    transition: all 1s cubic-bezier(0.075, 0.81, 0.165, 1);
+}
+
+h1:hover span {
+    letter-spacing: 4px;
+    color: #32213d;
+}
+
+/* style main buttons using transition */
+.btn-primary {
+    background-color: #8a4dff;
+    border-color: #8a4dff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* adjust styles on hover for main buttons */
+.btn-primary:hover {
+    background-color: #7323a1;
+    border-color: #7323a1;
+}
+
+/* style the user data table */
+.user-table {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* style table header and data cells using transition */
+.user-table th,
+.user-table td {
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* adjust styles on hover for sortable headers */
+.user-table th.sortable:hover {
+    background-color: #e9e2fd;
+}
+
+/* adjust styles on hover for table body cells */
+.user-table tbody td:hover {
+    background-color: #f0f0f0;
+}
+
+/* set background color for table body */
+.user-table tbody {
+    background-color: #faf8fb;
+}
+
+/* add cursor pointer to sortable headers */
+.user-table th.sortable {
+    cursor: pointer;
+}
+
+/* center content vertically and horizontally */
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* shift content upward */
+.shift-up {
+    transform: translateY(-565%);
+    transition: transform 1s ease;
+}
+
+/* define spacer height */
+.spacer {
+    height: 120px;
+}
+
+/* MEDIA */
+/* adjust shift-up animation for smaller screens */
+@media screen and (max-width: 768px) {
+    .shift-up {
+        transform: translateY(-600%);
+    }
+}
