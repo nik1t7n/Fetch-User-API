@@ -28,6 +28,10 @@ The application consists of a user interface designed with HTML and styled with 
 **Sorting by username**
 ![image](https://github.com/nik1t7n/Fetch-User-API/assets/90299797/dbe7672b-6e6d-4147-b20a-dc6bfa1bdac2)
 
+**Adaptivity**
+
+![image](https://github.com/nik1t7n/Fetch-User-API/assets/90299797/4321f1f7-753d-4e16-90c4-b1a19c02eda9)
+
 *Other features can be checked while using it by yourself*
 
 ## Features
